@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7764907533d1ca348b06d0aa61426cde, type: 3}
+  m_Name: Doc_Okafor
+  m_EditorClassIdentifier: Assembly-CSharp::DocumentoDados
+  titulo: "Anota\xE7\xF5es do Agente Okafor"
+  texto: "Dia 3 de vigil\xE2ncia na Mans\xE3o Varkoff.\n\nAs portas do sagu\xE3o
+    est\xE3o trancadas com fechaduras de bras\xE3o. A chave fica no cofre da galeria,
+    no primeiro andar.\n\nO mordomo disse que o velho Varkoff troca a combina\xE7\xE3o
+    toda semana. Desta vez \xE9 \"o ano em que ele nasceu de novo\". Ainda contou
+    que o patr\xE3o mandou gravar isso no pr\xF3prio retrato, aqui no sagu\xE3o.
+    Exc\xEAntrico.\n\nOuvi passos arrastados no corredor. Vou verificar.\n\n- D.
+    Okafor, DHS"
