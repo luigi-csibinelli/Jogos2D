@@ -13,11 +13,11 @@ TagManager:
   - UI
   - 
   - 
-  - Parede
-  - Zumbi
-  - Jogador
-  - Interagivel
-  - 
+  - Wall
+  - Zombie
+  - Player
+  - PlayerBlock
+  - Pickup
   - 
   - 
   - 

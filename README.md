@@ -1,87 +1,160 @@
-# Mansão Varkoff (nome provisório)
+# Sanatório 8-bit
 
-Survival horror 2D em 8-bit com câmera vista de cima (como GTA antigo / SAS 4), inspirado nos Resident Evil clássicos. O personagem gira para onde o mouse aponta, e a câmera fica próxima e com vinheta para o clima ficar sombrio. Projeto 2D da disciplina de Jogos Digitais (Insper, 2026-1).
+Shooter de sobrevivência em rodadas, visto de cima (estilo GTA 1 / Dead Ops
+Arcade), em pixel art 8-bit. É uma **homenagem a Verrückt**, o segundo mapa
+de zumbis de *Call of Duty: World at War*: a planta, as regras, os preços e as
+armas reais da Segunda Guerra seguem o original. Já a história, os personagens,
+as marcas dos refrigerantes, a arte, os sons e a música são todos **nossos**.
 
-Você é um agente do DHS enviado à mansão do excêntrico bilionário Aldous Varkoff, ligado ao grupo de bioterrorismo Ouroboros, para descobrir o que aconteceu com o Agente Okafor, desaparecido lá dentro. O foco é administrar recursos (munição, faca, cura, espaço no inventário) e resolver puzzles para destrancar a mansão.
+Projeto 2D, disciplina **Jogos Digitais**, Insper 2026.1.
+
+- **Jogue no navegador:** _(link do itch.io)_
+- **GDD:** _(link do Milanote)_. O texto-base está em [GDD.md](GDD.md).
+
+---
+
+## História
+
+Abril de 1945, norte da Itália. O **Cabo Ramos**, da Força Expedicionária
+Brasileira, se perde da patrulha numa tempestade e se abriga no velho
+**Sanatório de Valgrigia**. Ali a **Sociedade Lázaro** testava o *Soro L* nos
+pacientes, e eles continuam lá, mortos e de pé. Oito **fichas de paciente**
+espalhadas pelo prédio contam o que aconteceu. Quem encontra todas desbloqueia
+o epílogo no menu.
 
 ## Como jogar
 
-| Ação | Tecla |
-| --- | --- |
-| Mover | WASD ou setas |
-| Mirar | Mouse |
-| Atirar | Clique esquerdo |
-| Faca | Clique direito |
-| Recarregar | R |
-| Interagir / pegar / ler / vasculhar | E |
-| Inventário | Tab (ou I) |
-| Pausa | Esc |
+| Ação | Teclado e mouse | Controle |
+|---|---|---|
+| Mover | WASD / setas | Analógico esquerdo |
+| Mirar | Mouse | Analógico direito (mira assistida opcional) |
+| Atirar | Clique esquerdo | RT |
+| Faca | V / clique direito | RB |
+| Recarregar | R | X |
+| Arma primária / secundária | 1 / 2 | Y (alterna) |
+| Granada | G | LB |
+| Bouncing Betty | B | LT |
+| Usar / comprar / segurar para reconstruir | F / E | A |
+| Pausa | Esc / P | Start |
 
-- **A vida não aparece no HUD.** Ferido, o agente passa a mancar e o corpo balança; muito ferido, manca mais e vai pingando sangue.
-- O dano de cada tiro é `17 × aleatório(0,75 a 1,25)`. Com 40% da vida o zumbi **cai**. Enquanto ele está caído, a **faca o finaliza** gastando só 1 uso. Se você não o finalizar, ele se levanta e volta a perseguir.
-- **A munição não fica no chão: está escondida no cenário.** Chegue perto dos móveis e use **[E] Vasculhar**; alguns esconderijos estão vazios. O bilhete do mordomo, na mesinha da entrada, avisa sobre isso.
-- **Chaves não somem sozinhas.** Cabe a você perceber que uma chave não serve mais e largá-la para liberar espaço.
-- O **inventário tem 6 espaços**, e documentos também ocupam espaço. Dá para **largar** qualquer item, e ele fica no chão onde você o deixou.
-- **Abrir o inventário ou ler um documento não pausa o jogo.** Só o Esc pausa.
-- Quando um zumbi se levanta, toca uma trilha tensa. Ela para quando ele cai ou morre e recomeça se ele levantar de novo.
+Regras (as de Verrückt):
 
-## A primeira área (térreo + 1º andar)
+- Armas de fogo têm **20% de chance de crítico**, que dobra o dano daquele
+  tiro (cada chumbo da escopeta rola separado; explosões não). O crítico solta
+  um estouro amarelo e um "tim" agudo.
+- Bala que atravessa um zumbi segue com **50%** do dano para o próximo.
+- A **caixa misteriosa** só dá armas que **não** são vendidas na parede.
+- O **lança-chamas** (50 de dano por tique) não gasta munição, mas
+  **superaquece** depois de 5 s de fogo contínuo e trava por 5 s esfriando.
+  Rajadas curtas nunca superaquecem.
+- O soldado segura um modelo diferente para cada tipo de arma, e a silhueta da
+  arma atual aparece ao lado da munição (separa Kar98k e Springfield).
+- **Rodada dos cães:** a primeira cai na rodada 6 ou 7 e as próximas a cada 7
+  ou 8 rodadas. Os cães nascem em raios perto de você, são mais rápidos que o
+  jogador e o **último sempre deixa uma Munição Máxima**. O céu fica vermelho.
+- **Panzer:** a partir da rodada 20 (e a cada 4 rodadas) chega de
+  mochila-foguete um soldado blindado. Balas e fogo causam metade do dano,
+  explosivos causam o dano cheio. Ele usa lança-chamas de perto, uma garra que
+  te puxa de longe (cause 1500 de dano nele para se soltar) e um soco que
+  derruba quem não tem Ferro-Nog. Ao cair, sempre deixa um power-up.
+- **Soco em Lata** (no Necrotério, com energia, 5000): melhora a arma na mão.
+  Dano x2, pente x1,5, reserva x2, atravessa um zumbi a mais e o traçante fica
+  roxo. Pegue a arma antes que ela afunde de volta na máquina! Munição de arma
+  melhorada na parede custa 4500.
+- A **mira** segue o mouse, fica vermelha quando acerta e apagada quando não dá
+  para atirar (recarregando ou superaquecido).
+- Cada acerto vale **10 pontos**. Um abate vale **60**, ou **130** na faca.
+  Pregar uma tábua na janela vale **10**.
+- Com os pontos você abre **portas** (750 ou 1000), compra **armas desenhadas a
+  giz na parede** (a munição custa metade do preço) e roda a **caixa
+  misteriosa** (950).
+- O **disjuntor** fica na Sala do Gerador. Ele liga os **4 refrigerantes**, as
+  **4 armadilhas elétricas** das varandas, as lâmpadas e a **porta elétrica**
+  entre as duas alas.
+- Você começa na Ala Oeste ou na Ala Leste, sorteada a cada partida.
+- **2 golpes derrubam** (5 com Ferro-Nog). Cair sem **Revive-Já** encerra a
+  partida. Com ele, você levanta sozinho (no máximo 3 compras) e perde os
+  refrigerantes.
+- Segredo: dê descarga **3 vezes na privada da esquerda** no Andar Superior Oeste.
 
-- **Saguão (térreo):**
-  - Você entra pela porta leste, que emperra atrás de você.
-  - O interruptor ao lado dela acende as luzes, e o bilhete do mordomo está na mesinha logo abaixo.
-  - O corpo do Agente Okafor está no canto nordeste, com a pistola dele ao lado e um documento no corpo.
-  - Um zumbi caído no pé da escada se levanta quando você pega a pistola.
-  - O retrato do Varkoff fica na parede sul. O relógio esconde 3 balas.
-  - As portas norte e sul estão trancadas com fechaduras de brasão.
-- **Galeria (1º andar):**
-  - É um U em volta do vão do saguão, alcançado pela escada a oeste.
-  - O cofre fica no fim da ala sul e guarda a Chave do Brasão.
-  - Uma das estantes da ala norte esconde 4 balas.
-  - As portas da galeria têm fechaduras de lua, sol e estrela, reservadas para os próximos puzzles.
-- **Solução:** o documento diz que a combinação é "o ano em que ele nasceu de novo", e o retrato diz "Renascido em 1987". O código é **1987**. A chave abre as duas portas do térreo e fica no inventário até você largá-la.
-- **Futuro:** uma porta sob a escada, que abre com a chave mestre, vai levar ao laboratório embaixo da mansão (caminho sem volta).
+| Original | No jogo | Preço | Efeito |
+|---|---|---|---|
+| Juggernog | Ferro-Nog | 2500 | aguenta 5 golpes |
+| Quick Revive | Revive-Já | 500 | levanta sozinho (solo) |
+| Speed Cola | Turbo-Cola | 3000 | recarga e reconstrução 2x mais rápidas |
+| Double Tap | Gatilho Duplo | 2000 | +100% de cadência (no lança-chamas, esfria 2x mais rápido) |
+
+## Rubrica: onde cada item está
+
+| # | Rubrica | Onde |
+|---|---|---|
+| 1 | Conceito e narrativa | Lore original (FEB, Sociedade Lázaro, Soro L) em `Scripts/Core/Lore.cs`. São 8 fichas colecionáveis, guardadas entre partidas, mais o epílogo. |
+| 2 | Mecânicas | Rodadas, economia de pontos, portas e zonas, 26 armas (`WeaponCatalog.cs`), caixa com ciclo, refrigerantes, armadilhas, barricadas, granadas, molotov, Betty, rastejantes e 4 power-ups. |
+| 3 | Feedback | O giz das armas acende quando você chega perto. Preços aparecem nas portas. As máquinas acendem quando a energia liga. Os zumbis piscam ao levar dano e levantam os braços antes de atacar. Tábuas caem. Borda vermelha ao levar dano, câmera tremendo e sons posicionais. |
+| 4 | UI e menus | Menu (jogar, como jogar, opções, recordes, arquivos, créditos), pausa e fim de jogo com estatísticas. HUD com rodada em giz, pontos subindo, munição, refrigerantes e power-ups com tempo. Fonte pixel própria com acentos. |
+| 5 | Engajamento | Trilha e ambiente sonoro, luz escura antes da energia, lanterna em cone, dicas no momento certo e lore aos poucos. |
+| 6 | Level design | A planta de Verrückt: 10 zonas, 2 spawns, 9 portas pagas e a porta elétrica. Dicas de primeira vez (`Hints.cs`) ensinam cada mecânica quando ela aparece. |
+| 7 | Som e música | 82 sons originais sintetizados (`Tools/gerar_audio.py`): tiros por classe, gemidos, jingles, vinhetas, trilha ambiente, tema do menu e música secreta. |
+| 8 | Efeitos visuais | Luzes 2D (URP): lanterna, lâmpadas que piscam, luar nas janelas, clarões de tiro e explosão. Partículas de sangue, faíscas, fogo e poeira. Manchas no chão, traçantes, tremor de tela e linhas de TV opcionais. |
+| 9 | Re-jogabilidade | Spawn sorteado, caixa com ciclo aleatório, power-ups em ciclo, modo Insano, recordes por modo e fichas para encontrar. |
+| 10 | Balanceamento | Todos os números estão em `Scripts/Core/Balance.cs`: vida dos zumbis igual à de WaW (150 + 100 por rodada, depois x1,1) e curva de quantidade solo. Os testes travam as regras. |
+| 11 | Estados e erros | Planta validada na montagem (zonas alcançáveis, nenhum piso isolado, portas ligando 2 zonas). Zumbi travado volta ao pátio, então a rodada nunca emperra. Pontos sempre disponíveis (faca e tábuas). O jogo pausa ao trocar de aba. Saves protegidos e reinício com um botão. |
+| 12 | GDD | [GDD.md](GDD.md), espelhado no Milanote. |
 
 ## Estrutura do projeto
 
 ```
 Assets/
-  Scripts/            código do jogo (Jogador, Arma, Zumbi, Inventario, Musica, Energia...)
-    Interacao/        tudo que usa [E]: ItemNoChao, Corpo, Examinavel, Esconderijo, Cofre, Porta, Interruptor, Escada
-    UI/               HUD, InventarioUI, LeituraUI, TecladoUI, MenuPrincipal, FimDemo
-    Debug/            TesteAutomatico (roteiro de teste da sala)
-  Editor/MontaCena.cs monta cenas, prefabs e tiles do zero; também faz o build WebGL
-  Editor/TesteSala.cs teste do Test Runner que roda o roteiro da sala no editor
-  Scenes/             MainMenu, Sala01_Saguao, FimDemo
-  Prefabs/            Jogador, Zumbi, ItemNoChao
-  Sprites/ Audio/ Fontes/ Tiles/ Dados/
-Ferramentas/          scripts Python que geram sprites, sons e a fonte pixel
+  Scripts/Core      Game (estado), RoundManager, Balance, ShuffleBag, PowerUps, Lore, SaveData, Audio
+  Scripts/Map       VerrucktMap (planta ASCII), MapData (análise e validação), NavGrid (campo de fluxo), WorldBuilder
+  Scripts/Player    Player, Inventory, PlayerInput (Input System em código)
+  Scripts/Weapons   WeaponCatalog, Gunner (tiro), Explosives (projéteis, granadas, Betty)
+  Scripts/Zombies   Zombie (janela, perseguição, ataque, anti-travamento)
+  Scripts/Interact  WallBuy, Door, PowerSwitch, PerkMachine, MysteryBox, TrapLever, Barricade, Toilet, LoreNote
+  Scripts/UI        PixelFont/PixelText, UIKit, Hud, MainMenu, OptionsPanel
+  Scripts/FX        Fx (partículas, traçantes, manchas), LightKit, CameraRig
+  Editor            GameSetup (monta o projeto), BuildWebGL
+  Tests/Editor      testes de mapa, ciclos, campo de fluxo e balanceamento
+Tools/              gerar_mapa.py, gerar_sprites.py, gerar_audio.py
 ```
 
-### Gerar os assets e montar as cenas
+O mundo é montado em código a partir da planta ASCII de
+`Assets/Scripts/Map/VerrucktMap.cs`. Editar a planta muda o jogo, e o validador
+aponta qualquer erro antes de rodar.
 
+## Como compilar
+
+Requer Unity **6000.3.26f1** com o módulo WebGL e Python 3 com `numpy` e `Pillow`.
+
+```bash
+python3 Tools/gerar_sprites.py && python3 Tools/gerar_audio.py
 ```
-python Ferramentas/gera_sprites.py
-python Ferramentas/gera_sons.py
-python Ferramentas/gera_fonte.py
+
+Depois, no Unity: **Sanatório > Montar projeto** e **Sanatório > Gerar build
+WebGL**. A build sai em `Build/WebGL`. Pela linha de comando:
+
+```bash
+Unity -batchmode -projectPath . -executeMethod Sanatorio.EditorTools.GameSetup.BuildFromCommandLine -quit
+Unity -batchmode -projectPath . -runTests -testPlatform EditMode
+Unity -batchmode -projectPath . -executeMethod Sanatorio.EditorTools.BuildWebGL.BuildFromCommandLine -quit
 ```
 
-No Unity (6000.3.25f1), use o menu **Mansao > Montar tudo**. **Atenção:** isso recria as cenas do zero, então só rode de novo se quiser descartar as edições feitas à mão nelas. **Mansao > Build WebGL** gera o build em `Build/WebGL`.
+### Testar rápido no navegador
 
-Se você editar as paredes à mão no Tile Palette, confira se o `CompositeCollider2D` do tilemap "Paredes" tem formas. Quando montada por script, a geometria dele precisa ser gerada explicitamente; caso contrário, as paredes ficam sem colisão.
+Com a build aberta, o console do navegador aceita comandos de teste:
+`sanatorio('points 5000')`, `sanatorio('power')`, `sanatorio('round 10')`,
+`sanatorio('zone 3')` (vai para uma zona pelo número), `sanatorio('god')`,
+`sanatorio('give raygun')`, `sanatorio('kill')`, `sanatorio('dogs')` (próxima
+rodada é de cães), `sanatorio('panzer')` e `sanatorio('pack')` (melhora a arma na mão). O jogador comum nunca vê esses comandos.
 
-### Energia (para expandir)
+## Créditos e referências
 
-`RedeEnergia` guarda quais seções da mansão têm energia. Cada `SecaoEnergia` controla as luzes de uma seção, e um `Interruptor` só funciona se a seção dele tiver energia. O próximo passo é um `PainelEnergia` que liga seções novas e libera portas elétricas e similares.
-
-### Teste automático
-
-Um roteiro (`Scripts/Debug/TesteAutomatico.cs`) confere cerca de 50 regras da sala: zumbi, faca, música, esconderijos, documentos, colisão das paredes (térreo e galeria), escada, cofre, portas, inventário e morte. Há duas formas de rodar:
-
-- **No editor:** Window > General > Test Runner > EditMode > `RoteiroDaSala01`. O resultado aparece no Console (`TESTE ok` / `TESTE FALHA`).
-- **No build WebGL:** abra a página com `?teste=1` no fim da URL.
-
-## Créditos
-
-- Sprites, efeitos sonoros, músicas e a fonte pixel (PixelDHS) foram gerados por código para este projeto (pasta `Ferramentas/`).
-- Engine: Unity 6 (URP 2D).
+- **Inspiração:** *Verrückt*, mapa de *Call of Duty: World at War*
+  (Treyarch / Activision, 2009). Usamos como referência a planta, os preços, a
+  lista de armas e as regras, a partir da
+  [Call of Duty Wiki](https://callofduty.fandom.com/wiki/Verr%C3%BCckt). Não há
+  nenhum asset, nome de produto, personagem ou música do jogo original.
+- **Arte, sons, música, história e código:** feitos pelo grupo para este
+  projeto. Sprites gerados por `Tools/gerar_sprites.py`, sons e músicas por
+  `Tools/gerar_audio.py`.
+- **Motor:** Unity 6, URP 2D (luzes 2D), Input System.

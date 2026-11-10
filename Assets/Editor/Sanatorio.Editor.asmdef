@@ -1,0 +1,13 @@
+{
+    "name": "Sanatorio.Editor",
+    "rootNamespace": "Sanatorio.EditorTools",
+    "references": [
+        "Sanatorio",
+        "Unity.InputSystem",
+        "Unity.RenderPipelines.Universal.Runtime",
+        "Unity.RenderPipelines.Universal.2D.Runtime",
+        "Unity.RenderPipelines.Core.Runtime",
+        "UnityEngine.UI"
+    ],
+    "includePlatforms": ["Editor"]
+}
