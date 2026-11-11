@@ -8,9 +8,14 @@ as marcas dos refrigerantes, a arte, os sons e a música são todos **nossos**.
 
 Projeto 2D, disciplina **Jogos Digitais**, Insper 2026.1.
 
-- **Jogue no navegador:** _(link do itch.io)_
-- **GDD:** _(link do Milanote)_. O texto-base está em [GDD.md](GDD.md).
+- **Jogue no navegador:** [_JOGAR_](https://luigi-csibinelli.itch.io/sanatorio-8-bit)
+- **GDD:** [_MILANOTE_](https://app.milanote.com/1Xr6Ok1AwMfQ4P?p=EACCOJcWKfw). O texto-base está em [GDD.md](GDD.md).
 
+## Equipe:
+- Kauã Figueira
+- Luigi Sibinelli
+- Mathias Zanotto
+- Matheus Constante
 ---
 
 ## História
@@ -99,7 +104,7 @@ Regras (as de Verrückt):
 | 9 | Re-jogabilidade | Spawn sorteado, caixa com ciclo aleatório, power-ups em ciclo, modo Insano, recordes por modo e fichas para encontrar. |
 | 10 | Balanceamento | Todos os números estão em `Scripts/Core/Balance.cs`: vida dos zumbis igual à de WaW (150 + 100 por rodada, depois x1,1) e curva de quantidade solo. Os testes travam as regras. |
 | 11 | Estados e erros | Planta validada na montagem (zonas alcançáveis, nenhum piso isolado, portas ligando 2 zonas). Zumbi travado volta ao pátio, então a rodada nunca emperra. Pontos sempre disponíveis (faca e tábuas). O jogo pausa ao trocar de aba. Saves protegidos e reinício com um botão. |
-| 12 | GDD | [GDD.md](GDD.md), espelhado no Milanote. |
+| 12 | GDD | [Board no Milanote](https://app.milanote.com/1Xr6Ok1AwMfQ4P?p=EACCOJcWKfw) (Design / Dinâmica / Experiência) e texto-base em [GDD.md](GDD.md). |
 
 ## Estrutura do projeto
 
